@@ -77,7 +77,27 @@ function promptInput () {
 
   function generateReadme(username, project, description, install, usage, license, contributors, tests, faq)
   {
-    return username + project + description + install + usage + license + contributors + tests + faq;
+    return "Radical README" +
+    "\n\n" +
+    "### Username:" + "\n\n" + username +
+    "\n\n" +
+    "### Project Title:" + "\n\n" + project +
+    "\n\n" +
+    "### Description:" + "\n\n" + description +
+    "\n\n" +
+    "### Installation:" + "\n\n" + install +
+    "\n\n" +
+    "### Usage:" + "\n\n" + usage +
+    "\n\n" +
+    "### License:" + "\n\n" + license +
+    "\n\n" +
+    "### Contributing:" + "\n\n" + contributors +
+    "\n\n" +
+    "### Tests:" + "\n\n" + tests +
+    "\n\n" +
+    "### Questions:" + "\n\n" + faq +
+    "\n\n"
+    ;
   };
 
   init();
