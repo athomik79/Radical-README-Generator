@@ -2,6 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require ("util");
+const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptInput () {
   return inquirer.prompt([
@@ -67,10 +68,16 @@ function promptInput () {
     try {
       const {username, project, description, install, usage, license, contributors, tests, faq} = await promptInput ();
 
+      return writeFileAsync("Readme.md", generateReadme(username, project, description, install, usage, license, contributors, tests, faq));
     }
     catch (err) {
       console.log(err);
     }
   }
+
+  function generateReadme(username, project, description, install, usage, license, contributors, tests, faq)
+  {
+    return username + project + description + install + usage + license + contributors + tests + faq;
+  };
 
   init();
