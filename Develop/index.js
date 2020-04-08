@@ -1,54 +1,76 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
+const util = require ("util");
 
-inquirer
-  .prompt({
-    message: "Enter your GitHub username:",
-    name: "username"
-  })
-  .then(function({ username }) {
-    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+function promptInput () {
+  return inquirer.prompt([
+    {
+    type: "input",
+    name: "username",
+    message: "Enter your GitHub username:"
+    },
+    {
+      type: "input",
+      name: "project",
+      message: "Enter your GitHub project title:"
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "Enter a description for your project:"
+    },
+    {
+      type: "input",
+      name: "install",
+      message: "Describe the installation instructions for this project:"
+    },
+    {
+      type: "input",
+      name: "usage",
+      message: "Enter the usage instructions:"
+    },
+    {
+      type: "checkbox",
+      name: "license",
+      message: "Choose a license for this project:",
+      choices: [
+        "MIT",
+        "MPL-2.0",
+        "Apache-2.0",
+        "GPL-3.0",
+        "Unlicense"
+      ]
+      },
+    {
+      type: "input",
+      name: "contributors",
+      message: "Name the contributors to this project:"
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "Describe the tests for this project:"
+    },
+    {
+      type: "input",
+      name: "faq",
+      message: "Frequently asked questions for this project:"
+    }
+  ]);
+}
 
-    axios.get(queryUrl).then(function(res) {
-      const repoNames = res.data.map(function(repo) {
-        return repo.name;
-      });
+  async function init ()
+  {
+    console.log(`Radical README Generator`);
 
-      const repoNamesStr = repoNames.join("\n");
+    try {
+      const {username, project, description, install, usage, license, contributors, tests, faq} = await promptInput ();
 
-      fs.writeFile("repos.txt", repoNamesStr, function(err) {
-        if (err) {
-          throw err;
-        }
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 
-        console.log(`Saved ${repoNames.length} repos`);
-      });
-    });
-  });
-    
-
-
-// Error message
-//   .catch(error => {
-//     if(error.isTtyError) {
-//       // Prompt couldn't be rendered in the current environment
-//     } else {
-//       // Something else when wrong
-//     }
-//   });
-
-
-// Template
-// const questions = [
-
-// ];
-
-// function writeToFile(fileName, data) {
-// }
-
-// function init() {
-
-// }
-
-// init();
+  init();
