@@ -1,5 +1,9 @@
 Radical README
 
+### Avatar:
+
+https://avatars.githubusercontent.com/u/55367871?
+
 ### Username:
 
 athomik79
@@ -14,11 +18,11 @@ Generates a README.md from user input
 
 ### Installation:
 
-install and enjoy
+node index.js
 
 ### Usage:
 
-Answer the prompts to create a README.md for your github project
+Answer the prompts to generate a README.md for your github project
 
 ### License:
 
@@ -26,7 +30,7 @@ MIT
 
 ### Contributing:
 
-ADT
+athomik79
 
 ### Tests:
 

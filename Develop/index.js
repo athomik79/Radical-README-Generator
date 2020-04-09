@@ -68,16 +68,22 @@ function promptInput () {
     try {
       const {username, project, description, install, usage, license, contributors, tests, faq} = await promptInput ();
 
-      return writeFileAsync("Readme.md", generateReadme(username, project, description, install, usage, license, contributors, tests, faq));
+      const GitHub = await axios.get(`https://api.github.com/users/${username}/events/public`);
+
+      const avatar = GitHub.data[0].actor.avatar_url;
+
+      return writeFileAsync("Readme.md", generateReadme(avatar, username, project, description, install, usage, license, contributors, tests, faq));
     }
     catch (err) {
       console.log(err);
     }
   }
 
-  function generateReadme(username, project, description, install, usage, license, contributors, tests, faq)
+  function generateReadme(avatar, username, project, description, install, usage, license, contributors, tests, faq)
   {
     return "Radical README" +
+    "\n\n" +
+    "### Avatar:" + "\n\n" + avatar +
     "\n\n" +
     "### Username:" + "\n\n" + username +
     "\n\n" +
