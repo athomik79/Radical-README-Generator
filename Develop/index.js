@@ -83,7 +83,7 @@ function promptInput () {
   {
     return "Radical README" +
     "\n\n" +
-    "### Avatar:" + "\n\n" + avatar +
+    `<img src="` + avatar + `" height="60px" width="60px">` +
     "\n\n" +
     "### Username:" + "\n\n" + username +
     "\n\n" +

@@ -1,8 +1,6 @@
 Radical README
 
-### Avatar:
-
-https://avatars.githubusercontent.com/u/55367871?
+<img src="https://avatars.githubusercontent.com/u/55367871?" height="60px" width="60px">
 
 ### Username:
 
@@ -10,7 +8,7 @@ athomik79
 
 ### Project Title:
 
-Radical README Generator
+Radical README
 
 ### Description:
 
@@ -22,7 +20,7 @@ node index.js
 
 ### Usage:
 
-Answer the prompts to generate a README.md for your github project
+Answer the propmpts to generate a README.md for your github project
 
 ### License:
 
