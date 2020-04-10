@@ -1,6 +1,6 @@
 # Radical README
 
-<img src="[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)">
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 
 <img src="https://avatars.githubusercontent.com/u/55367871?" height="60px" width="60px">
 
@@ -34,7 +34,7 @@ athomik79
 
 ### Tests:
 
-none
+Does it work?
 
 ### Questions:
 
