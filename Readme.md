@@ -39,6 +39,5 @@ none
 ### Questions:
 
 Does it work?!
-
-<video src="Radical README Generator.mp4" width="320" height="200" controls preload></video>
+![Radical README demo](Radical README Generator.gif)
 
