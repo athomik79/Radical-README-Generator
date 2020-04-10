@@ -1,5 +1,9 @@
 Radical README
 
+### Badge:
+
+
+
 <img src="https://avatars.githubusercontent.com/u/55367871?" height="60px" width="60px">
 
 ### Username:
@@ -8,7 +12,7 @@ athomik79
 
 ### Project Title:
 
-Radical README
+Radical README Generator
 
 ### Description:
 
@@ -20,7 +24,7 @@ node index.js
 
 ### Usage:
 
-Answer the propmpts to generate a README.md for your github project
+Answer the prompts to generate a README.md for your github project
 
 ### License:
 
