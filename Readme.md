@@ -40,5 +40,5 @@ none
 
 Does it work?!
 
-![](Radical README Generator.mp4)
+<video src="Radical README Generator.mp4" width="320" height="200" controls preload></video>
 
