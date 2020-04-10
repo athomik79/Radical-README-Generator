@@ -40,5 +40,5 @@ none
 
 Does it work?!
 
-![Radical README demo](Radical README Generator.gif)
+![Radical README demo](https://github.com/athomik79/Radical-README-Generator/blob/master/Radical%20README%20Generator.gif)
 
