@@ -14,7 +14,7 @@ Radical README Generator
 
 ### Description:
 
-Generates a README.md from user prompts
+Generates a README.md from user input
 
 ### Installation:
 

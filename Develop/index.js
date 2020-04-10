@@ -66,22 +66,22 @@ function promptInput () {
     console.log(`Radical README Generator`);
 
     try {
-      const {username, project, description, install, usage, license, contributors, tests, faq} = await promptInput ();
+      const {username, project, description, install, usage, license, choices, contributors, tests, faq} = await promptInput ();
 
       const GitHub = await axios.get(`https://api.github.com/users/${username}/events/public`);
 
       const avatar = GitHub.data[0].actor.avatar_url;
 
-      var badge = "";
-      if (license === "MIT") {
+      const badge = "";
+      if (choices === "MIT") {
         badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
-      } else if (license === "MPL-2.0") {
+      } else if (choices === "MPL-2.0") {
           badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
-      } else if (license === "Apache-2.0") {
+      } else if (choices === "Apache-2.0") {
           badge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
-      } else if (license === "GPL-3.0") {
+      } else if (choices === "GPL-3.0") {
         badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
-      } else if (license === "Unlicense") {
+      } else if (choices === "Unlicense") {
         badge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
       }
 
