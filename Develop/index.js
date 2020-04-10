@@ -94,9 +94,9 @@ function promptInput () {
 
   function generateReadme(badge, avatar, username, project, description, install, usage, license, contributors, tests, faq)
   {
-    return "Radical README" +
+    return "# Radical README" +
     "\n\n" +
-    "### Badge:" + "\n\n" + badge +
+    `<img src="` + badge + `">` +
     "\n\n" +
     `<img src="` + avatar + `" height="60px" width="60px">` +
     "\n\n" +
